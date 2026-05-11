@@ -1,0 +1,149 @@
+/* Header CSS */
+
+
+:root {
+    /* Font */
+    --font-heading: "Orbitron", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-three: "Rajdhani", sans-serif;
+}
+
+
+html,
+body {
+    font-family: var(--font-body);
+    color: white;
+}
+
+h1 {
+    font-family: var(--font-heading);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/hero-background.png);
+    object-fit: cover;
+    color: white;
+}
+
+
+.logo img {
+    width: 100%;
+    max-width: 160px;
+}
+
+.nav-list li {
+    cursor: pointer;
+    padding: 20px 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.nav-list li:nth-of-type(1) {
+    position: relative;
+}
+
+.nav-list li:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 5px;
+    bottom: 0;
+    background-color: #14B9A0;
+    filter: drop-shadow(0px -10px 8px #14B9A0);
+    box-shadow: 0px -10px 20px 2px #14B9A0;
+    z-index: 0;
+}
+
+/* ------------ Stats CSS -------------- */
+
+.stat:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 70px;
+    background-color: #696b6b;
+    left: 0;
+    top: 0;
+}
+
+.stat:nth-child(2)::after,
+.stat:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 70px;
+    background-color: #696b6b;
+    right: 0;
+    top: 0;
+}
+
+
+/* --------- Steps CSS ----------- */
+
+.step1 {
+    width: 260px;
+    height: 180px;
+    position: relative;
+}
+
+.doted-line::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    /* border: 1px dashed #14B9A0; */
+    background-image:
+        repeating-linear-gradient(to right, #14B9A0 0%, black 50%, transparent 50%, transparent 100%);
+    background-size: 6px 2px;
+    left: -23%;
+    top: 27%;
+}
+
+.step-icon::before {
+    content: '';
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 5px #14B9A0;
+    z-index: 1;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(50deg, #14B9A0, #000306, #14B9A0) border-box;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+/* -------- Footer CTA ------------ */
+
+.footer-CTA {
+    width: 100%;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 5px #14B9A0;
+    background-image: url(./images/footer-bg\ \(2\).png);
+    object-fit: cover;
+    background-position: left;
+}
+
+.footer-right::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: linear-gradient(to bottom,
+            transparent,
+            #757979,
+            transparent);
+    filter: blur(0.5px);
+    opacity: 0.8;
+    height: 160px;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -52%);
+}
